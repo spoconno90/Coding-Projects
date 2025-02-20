@@ -1,0 +1,47 @@
+//Push XBOX Build
+//Xboxbuildupdate.cpp
+#include <iostream>
+#include "xboxpush.hpp"
+
+int main() {
+
+std::string currentbuild, desiredbuild;
+
+get_currentbuild();
+get_desiredbuild();
+push();
+end();
+
+}
+
+//xboxpush.hpp
+double getcurrentbuild();
+void getdesiredbuild();
+void push();
+void end();
+
+//xboxpush.cpp
+#include <iostream>
+#include "xboxpush.hpp"
+
+get_currentbuild() {
+  [Insert code that finds the current build number and sets variable currentbuild=that build #]
+  std::cout << "Hello! The build that is currently installed is " << currentbuild; << "\n";
+};
+
+get_desiredbuild() {
+    std::cout << "What is the build number you want to install?\n";
+    std::cin >> desiredbuild;
+  };
+
+push() {
+if (desiredbuild!=currentbuild) {
+    [Insert code to begin installing desired build]
+} else {
+    std::cout << "This build is already installed."
+}
+};
+
+end() {
+    std::cout << "This program is now complete."
+};
