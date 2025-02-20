@@ -38,10 +38,10 @@ push() {
 if (desiredbuild!=currentbuild) {
     [Insert code to begin installing desired build]
 } else {
-    std::cout << "This build is already installed."
+    std::cout << "This build is already installed.\n"
 }
 };
 
 end() {
-    std::cout << "This program is now complete."
+    std::cout << "This program is now complete.\n"
 };
