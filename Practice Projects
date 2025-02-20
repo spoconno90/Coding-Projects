@@ -29,8 +29,6 @@ int later_years = (dog_age-2)*4;
 human_years = early_years + later_years;
 std::cout << human_years << "\n";
 
-
-
 }
 
 //Quadratic Formula - Solves Quadratic Formula for X
@@ -80,14 +78,12 @@ double solesdollars = soles*0.27;
 double Dollars = pesosdollars+reaisdollars+solesdollars;
 
 std::cout << "US Dollars = $" << Dollars << "\n";
-
   
 }
 
 //Magic 8 Ball is a code that gives an answer based on a 1-0 Random Number Generation (RNG)
 //magic8.cpp
 #include <iostream>
-	
 
 int main() {
   srand(time(NULL));
@@ -132,24 +128,23 @@ int ravenclaw = 0;
 int slytherin = 0;
 int answer1, answer2, answer3, answer4;
 // Question 1
-std::cout << "The Sorting Hat Quiz!\n";
-std::cout << "Q1) When I'm dead, I want people to remember me as:\n" << "\n" << "  1) The Good\n" << "  2) The Great\n" << "  3) The Wise\n" << "  4) The Bold\n";
-
-std::cin >> answer1;
-if (answer1 == 1) {
-  hufflepuff++;
-} else if (answer1 == 2) {
-  slytherin++;
-} else if (answer1 == 3) {
-  ravenclaw++;
-} else if (answer1 == 4) {
-  gryffindor++;
-} else {
+  std::cout << "The Sorting Hat Quiz!\n";
+  std::cout << "Q1) When I'm dead, I want people to remember me as:\n" << "\n" << "  1) The Good\n" << "  2) The Great\n" << "  3) The Wise\n" << "  4) The Bold\n";
+  std::cin >> answer1;
+    if (answer1 == 1) {
+      hufflepuff++;
+    } else if (answer1 == 2) {
+      slytherin++;
+    } else if (answer1 == 3) {
+      ravenclaw++;
+    } else if (answer1 == 4) {
+      gryffindor++;
+    } else {
   std::cout << "Invalid input.\n";
 }
+
 // Question 2
 std::cout << "Q2) Dawn or Dusk?\n" << "\n" << "  1) Dawn\n" << "  2) Dusk\n";
-
 std::cin >> answer2;
 if (answer2 == 1) {
   gryffindor++ && ravenclaw++;
@@ -160,7 +155,6 @@ if (answer2 == 1) {
 }  
 //Question 3
 std::cout << "Q3) Which kind of instrument most pleases your ear?\n" << "\n" << "  1) The violin\n" << "  2) The trumpet\n" << "  3) The piano\n" << "  4) The drum\n";
-
 std::cin >> answer3;
 if (answer3 == 1) {
   slytherin++;
@@ -175,7 +169,6 @@ if (answer3 == 1) {
 }
 //Question 4
 std::cout << "Q4) Which road tempts you most?\n" << "\n" << "  1) The wide, sunny grassy lane\n" << "  2) The narrow, dark, latern-lit alley\n" << "  3) The twisting, leaf-strewn path through woods\n" << "  4) The cobbled street lined (ancient buildings)\n";
-
 std::cin >> answer4;
 if (answer4 == 1) {
   hufflepuff++;
@@ -223,8 +216,8 @@ std::cout << "Select Rock, Paper, Scissors, Lizard, or Spock!\n";
 std::cin >> userchoice;
 std::cout << "User Choice is " << userchoice << ".\n";
 
-srand(time(NULL));
-int RNG = std::rand() % 5;
+  srand(time(NULL));
+  int RNG = std::rand() % 5;
 
 if (RNG == 0) {
   computerchoice = "Rock"; 
@@ -239,7 +232,6 @@ if (RNG == 0) {
 } 
 
 std::cout << "Computer choice is " << computerchoice << ".\n";
-
 if (userchoice == computerchoice) {
   std::cout << "Tie!\n";
 } else if (userchoice == "Rock" && computerchoice == "Scissors") {
@@ -333,6 +325,7 @@ for (int c=0; c< result.size(); c++) {
   std::cout << result[c];
 }
 std::cout << "\n";
+
 }
 //Question: Is for loop the only way to output vectors?
 
