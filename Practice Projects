@@ -1,0 +1,703 @@
+//Block Letters - Write Initials in Block Letters
+//initials.cpp
+
+#include <iostream>
+
+int main() {
+
+std::cout << "SSSSS PPPPP OOOOO\n";
+std::cout << "S     P   P O   O\n";
+std::cout << "S     P   P O   O\n";
+std::cout << "SSSSS PPPPP O   O\n";
+std::cout << "    S P     O   O\n";
+std::cout << "    S P     O   O\n";
+std::cout << "SSSSS P     OOOOO\n";
+}
+
+//Dog Years - Convert Dog Age to Human Age for Dogs over 2
+//dog_years.cpp
+
+#include <iostream>
+
+int main() {
+  
+int dog_age = 10;  
+int human_years;
+int early_years = 21;
+int later_years = (dog_age-2)*4;
+
+human_years = early_years + later_years;
+std::cout << human_years << "\n";
+
+
+
+}
+
+//Quadratic Formula - Solves Quadratic Formula for X
+//quadratic.cpp
+
+#include <iostream>
+#include <cmath>
+
+int main() {
+  double a, b, c;
+  double root1, root2; 
+
+std::cout << "Enter a: ";
+std::cin >> a; 
+std::cout << "Enter b: ";
+std::cin >> b;
+std::cout << "Enter c: ";
+std::cin >> c;  
+    
+  root1 = (-b+sqrt(b*b-4*a*c))/(2*a);
+  root2 = (-b-sqrt(b*b-4*a*c))/(2*a);
+
+std::cout << root1 << " Root 1 \n";
+std::cout << root2 << " Root 2 \n";
+
+}
+
+//Piggy Bank - Prompts user for currency and converts to USD total 
+//currency.cpp
+
+#include <iostream>
+
+int main() {
+
+double pesos, reais, soles, dollars;
+  
+std::cout << "Enter number of Colmbian Pesos:\n";
+std::cin >> pesos;
+std::cout << "Enter number of Brazilian Reais:\n";
+std::cin >> reais;
+std::cout << "Enter number of Peruvian Soles:\n";
+std::cin >> soles;
+
+double pesosdollars = pesos*0.049;
+double reaisdollars = reais*0.17;
+double solesdollars = soles*0.27;
+double Dollars = pesosdollars+reaisdollars+solesdollars;
+
+std::cout << "US Dollars = $" << Dollars << "\n";
+
+  
+}
+
+//Magic 8 Ball is a code that gives an answer based on a 1-0 Random Number Generation (RNG)
+//magic8.cpp
+#include <iostream>
+	
+
+int main() {
+  srand(time(NULL));
+  int answer = std::rand() % 10;  
+
+std::cout << "MAGIC 8-BALL: " << answer << "\n";
+if (answer==0) {
+  std::cout << "It is certain.\n";
+} else if (answer==10) {
+  std::cout << "Very Doubeful.\n";
+} else if (answer==1) {
+  std::cout << "Tomorrow will be a good day.\n";
+} else if (answer==2) {
+  std::cout << "Tomorrow will be a great day.\n";
+} else if (answer==3) {
+  std::cout << "Tomorrow will be an amazing day.\n";
+} else if (answer==4) {
+  std::cout << "Tomorrow will be the greatest day.\n";
+} else if (answer==5) {
+  std::cout << "Tomorrow will be a very good day.\n";
+} else if (answer==6) {
+  std::cout << "Tomorrow will be an excellent day.\n";
+} else if (answer==7) {
+  std::cout << "Tomorrow will be the best day.\n";
+} else if (answer==8) {
+  std::cout << "Tomorrow will be the very best day.\n";
+}  
+  else {
+  std::cout << "Tomorrow will be a very great day.\n";
+}
+}
+
+//Harry Potter Sorting Hat Quiz asks questions and gives points to each house variable based on the answers of the questions
+//sortinghat.cpp
+#include <iostream>
+
+int main() {
+
+int gryffindor = 0;
+int hufflepuff = 0;
+int ravenclaw = 0;
+int slytherin = 0;
+int answer1, answer2, answer3, answer4;
+// Question 1
+std::cout << "The Sorting Hat Quiz!\n";
+std::cout << "Q1) When I'm dead, I want people to remember me as:\n" << "\n" << "  1) The Good\n" << "  2) The Great\n" << "  3) The Wise\n" << "  4) The Bold\n";
+
+std::cin >> answer1;
+if (answer1 == 1) {
+  hufflepuff++;
+} else if (answer1 == 2) {
+  slytherin++;
+} else if (answer1 == 3) {
+  ravenclaw++;
+} else if (answer1 == 4) {
+  gryffindor++;
+} else {
+  std::cout << "Invalid input.\n";
+}
+// Question 2
+std::cout << "Q2) Dawn or Dusk?\n" << "\n" << "  1) Dawn\n" << "  2) Dusk\n";
+
+std::cin >> answer2;
+if (answer2 == 1) {
+  gryffindor++ && ravenclaw++;
+} else if (answer2 == 2) {
+  slytherin++ && hufflepuff++;
+} else {
+  std::cout << "Invalid input.\n";
+}  
+//Question 3
+std::cout << "Q3) Which kind of instrument most pleases your ear?\n" << "\n" << "  1) The violin\n" << "  2) The trumpet\n" << "  3) The piano\n" << "  4) The drum\n";
+
+std::cin >> answer3;
+if (answer3 == 1) {
+  slytherin++;
+} else if (answer3 == 2) {
+  hufflepuff++;
+} else if (answer3 == 3) {
+  ravenclaw++;
+} else if (answer3 == 4) {
+  gryffindor++;
+} else {
+  std::cout << "Invalid input.\n";
+}
+//Question 4
+std::cout << "Q4) Which road tempts you most?\n" << "\n" << "  1) The wide, sunny grassy lane\n" << "  2) The narrow, dark, latern-lit alley\n" << "  3) The twisting, leaf-strewn path through woods\n" << "  4) The cobbled street lined (ancient buildings)\n";
+
+std::cin >> answer4;
+if (answer4 == 1) {
+  hufflepuff++;
+} else if (answer4 == 2) {
+  slytherin++;
+} else if (answer4 == 3) {
+  gryffindor++;
+} else if (answer4 == 4) {
+  ravenclaw++;
+} else {
+  std::cout << "Invalid input.\n";
+}
+  int max = 0;
+  std::string house;
+if (gryffindor > max) {
+  max = gryffindor;
+  house = "Gryffindor";
+}
+if (slytherin > max) {
+  max = slytherin;
+  house = "Slytherin";
+}
+if (hufflepuff > max) {
+  max = hufflepuff;
+  house = "Hufflepuff";
+}
+if (ravenclaw > max) {
+  max = ravenclaw;
+  house = "Ravenclaw";
+}
+std::cout << house << "!\n";
+}
+
+//Rock Paper Scissors Lizard Spock Game
+//rock_paper_scissors.cpp
+
+#include <iostream>
+#include <cstdlib>
+
+int main(){
+std::string userchoice;
+std::string computerchoice;
+
+std::cout << "Select Rock, Paper, Scissors, Lizard, or Spock!\n";
+std::cin >> userchoice;
+std::cout << "User Choice is " << userchoice << ".\n";
+
+srand(time(NULL));
+int RNG = std::rand() % 5;
+
+if (RNG == 0) {
+  computerchoice = "Rock"; 
+} else if (RNG == 1) {
+  computerchoice = "Paper"; 
+} else if (RNG == 2) {
+  computerchoice = "Scissors"; 
+} else if (RNG == 3) {
+  computerchoice = "Lizard"; 
+} else if (RNG == 4) {
+  computerchoice = "Spock"; 
+} 
+
+std::cout << "Computer choice is " << computerchoice << ".\n";
+
+if (userchoice == computerchoice) {
+  std::cout << "Tie!\n";
+} else if (userchoice == "Rock" && computerchoice == "Scissors") {
+ std::cout << "Player Win!\n"; 
+} else if (userchoice == "Rock" && computerchoice == "Lizard") {
+ std::cout << "Player Win!\n"; 
+} else if (userchoice == "Rock" && computerchoice == "Spock") {
+ std::cout << "Computer Win!\n"; 
+} else if (userchoice == "Rock" && computerchoice == "Paper") {
+ std::cout << "Computer Win!\n"; 
+} else if (userchoice == "Paper" && computerchoice == "Rock") {
+ std::cout << "Player Win!\n"; 
+} else if (userchoice == "Paper" && computerchoice == "Spock") {
+ std::cout << "Player Win!\n"; 
+} else if (userchoice == "Paper" && computerchoice == "Lizard") {
+ std::cout << "Computer Win\n"; 
+}  else if (userchoice == "Paper" && computerchoice == "Scissors") {
+ std::cout << "Computer Win\n"; 
+} else if (userchoice == "Scissors" && computerchoice == "Paper") {
+  std::cout << "Player Win\n"; 
+} else if (userchoice == "Scissors" && computerchoice == "Lizard") {
+  std::cout << "Player Win\n"; 
+} else if (userchoice == "Scissors" && computerchoice == "Rock") {
+ std::cout << "Computer Win\n"; 
+} else if (userchoice == "Scissors" && computerchoice == "Spock") {
+ std::cout << "Computer Win\n"; 
+} else if (userchoice == "Spock" && computerchoice == "Scissors") {
+ std::cout << "Player Win\n"; 
+} else if (userchoice == "Spock" && computerchoice == "Rock") {
+ std::cout << "Player Win\n"; 
+} else if (userchoice == "Spock" && computerchoice == "Paper") {
+ std::cout << "Computer Win\n"; 
+}  else if (userchoice == "Spock" && computerchoice == "Lizard") {
+ std::cout << "Computer Win\n"; 
+} else if (userchoice == "Lizard" && computerchoice == "Spock") {
+ std::cout << "Player Win\n"; 
+} else if (userchoice == "Lizard" && computerchoice == "Paper") {
+ std::cout << "Player Win\n"; 
+} else if (userchoice == "Lizard" && computerchoice == "Scissors") {
+ std::cout << "Computer Win\n"; 
+} else if (userchoice == "Lizard" && computerchoice == "Rock") {
+ std::cout << "Computer Win\n"; 
+} 
+} 
+
+//FizzBuzz - Prints 1-100 with Fizz for multiples of 3, Buzz for multiples of 5, and FizzBuzz for multiples of 3 and 5. A classic interview question.
+
+#include <iostream>
+
+int main() {
+
+for (int i=1; i<=100; i++) {
+
+if (i%3 == 0 && !(i%5 == 0)) {
+  std::cout << "Fizz\n"; 
+} else if (i%5 == 0 && !(i%3 == 0)) {
+  std::cout << "Buzz\n";
+} else if (i%5 == 0 and i%3 == 0) {
+  std::cout << "FizzBuzz\n";
+}
+  else {
+  std::cout << i;
+  std::cout << "\n";
+}
+}
+}
+
+//Whale Talk converts phrase to Whale Talk
+//whale.cpp
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+int main () {
+std::string phrase = "Turpentine and Turtles";
+std::vector<char> vowels = {'a', 'e', 'i', 'o', 'u'};
+std::vector<char> result;
+
+for (int i = 0; i < phrase.size(); i++) {
+for (int b = 0; b < vowels.size(); b++) {
+if (phrase[i] == vowels[b]) {
+  result.push_back(phrase[i]);
+  if (phrase[i] == 'e' or phrase[i] == 'u') {
+    result.push_back(phrase[i]);
+  }
+}
+}
+}
+for (int c=0; c< result.size(); c++) {
+  std::cout << result[c];
+}
+std::cout << "\n";
+}
+//Question: Is for loop the only way to output vectors?
+
+//UFO Hangman Game
+//ufo.cpp
+
+#include <iostream>
+#include <vector>
+#include "ufo_functions.hpp"
+
+int main() {
+std::string codeword = "codecademy";
+std::string answer = "__________";
+int misses = 0;
+char letter;
+std::vector<char> incorrect;
+bool guess = false;
+
+greet();
+
+while (answer != codeword && misses < 7) {
+  display_misses(misses);
+  display_status(incorrect, answer);
+  std::cout << "Please enter your guess: ";
+  std::cin >> letter;
+  for (int g = 0; g < codeword.length(); g++) { 
+    if (codeword[g] == letter) {
+      answer[g] = letter;
+      guess = true;
+    }
+  }
+  if (guess ==true) {
+    std::cout << "Correct!\n";
+  } else {
+    std::cout << "Incorrect! The tractor beam pulls the person in further.\n";
+    incorrect.push_back(letter);
+    misses++;
+  }
+guess = false;
+}
+end_game(answer, codeword);
+}
+
+//ufo_functions.hpp
+#include <vector>
+
+void display_misses(int misses);
+
+//Function Declarations
+void display_status(std::vector<char> incorrect, std::string answer);
+
+void greet ();
+
+void end_game(std::string answer, std::string codeword);
+
+
+//ufo_functions.cpp
+
+#include <iostream>
+#include <vector>
+
+//Function definitions
+void greet () {
+std::cout << "=============\n" <<
+"UFO: The Game\n" <<
+"=============\n" <<
+"Instructions: save your friend from alien abduction by guessing the letters in the codeword.\n";
+}
+
+void end_game(std::string answer, std::string codeword) {
+  if (answer==codeword) {
+  std::cout << "Hooray! You saved the person and earned a medal of honor!\n";
+} else {
+  std::cout << "Oh no! The UFO just flew away with another person!\n";
+}
+}
+void display_status(std::vector<char> incorrect, std::string answer) {
+std::cout << "Incorrect Guesses: ";
+  for (int i=0; i<incorrect.size(); i++) {
+    std::cout << incorrect[i] << " ";
+  } std::cout << "\n";
+  std::cout << "Codeword: \n";
+  for (int c=0; c<answer.size(); c++) {
+    std::cout << answer[c] << " ";
+  } std::cout << "\n";
+}
+
+void display_misses(int misses) {
+
+  if (misses == 0 || misses == 1) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /     \\        (  Send help! ) \n";
+    std::cout << "             /   0   \\      / `-----------'  \n";
+    std::cout << "            /  --|--  \\    /                 \n";
+    std::cout << "           /     |     \\                     \n";
+    std::cout << "          /     / \\     \\                   \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 2) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /  0  \\        (  Send help! ) \n";
+    std::cout << "             / --|-- \\      / `-----------'  \n";
+    std::cout << "            /    |    \\    /                 \n";
+    std::cout << "           /    / \\    \\                    \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 3) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /--|--\\        (  Send help! ) \n";
+    std::cout << "             /   |   \\      / `-----------'  \n";
+    std::cout << "            /   / \\   \\    /                \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 3) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /--|--\\        (  Send help! ) \n";
+    std::cout << "             /   |   \\      / `-----------'  \n";
+    std::cout << "            /   / \\   \\    /                \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 4) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /  |  \\        (  Send help! ) \n";
+    std::cout << "             /  / \\  \\      / `-----------' \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 5) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              / / \\ \\        (  Send help! )\n";
+    std::cout << "             /       \\      / `-----------'  \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+  else if (misses == 6) {
+
+    std::cout << "                 .                            \n";
+    std::cout << "                 |                            \n";
+    std::cout << "              .-\"^\"-.                       \n";
+    std::cout << "             /_....._\\                       \n";
+    std::cout << "         .-\"`         `\"-.                  \n";
+    std::cout << "        (  ooo  ooo  ooo  )                   \n";
+    std::cout << "         '-.,_________,.-'    ,-----------.   \n";
+    std::cout << "              /     \\        (  Send help! ) \n";
+    std::cout << "             /       \\      / `-----------'  \n";
+    std::cout << "            /         \\    /                 \n";
+    std::cout << "           /           \\                     \n";
+    std::cout << "          /             \\                    \n";
+    std::cout << "         /               \\                   \n";
+
+  }
+
+}
+
+
+//Tic-Tac-Toe game between 2 players
+//ttt.cpp
+#include <iostream>
+#include "tttdeclarations.hpp"
+
+int main() {
+  
+  greet();
+  turn();
+  end();
+    
+}
+
+//tttdeclarations.hpp
+
+//Function Declarations
+void greet();
+void end();
+bool is_winner();
+bool filled_up();
+void turn();
+void choose_number();
+void update_board();
+void change_player();
+void draw();
+
+///tttdefinitions.cpp
+
+#include <iostream>
+#include "tttdeclarations.hpp"
+
+std::string board[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "}; // board array
+int playernumber = 1; //playernumber will iterate between 1 and 2
+int position = 0; //position will be interger 1-9 corresponding to array position (-1)
+
+//Function Definitions
+void greet() {
+
+  std::cout << "===========\n";
+  std::cout << "Tic-Tac-Toe!\n";
+  std::cout << "===========\n\n";
+  
+  std::cout << "Player 1) X\n";
+  std::cout << "Player 2) O\n\n";
+
+  std::cout << "     |     |      \n";
+  std::cout << "  1  |  2  |  3   \n";
+  std::cout << "_____|_____|_____ \n";
+  std::cout << "     |     |      \n";
+  std::cout << "  4  |  5  |  6   \n";
+  std::cout << "_____|_____|_____ \n";
+  std::cout << "     |     |      \n";
+  std::cout << "  7  |  8  |  9   \n";
+  std::cout << "     |     |      \n\n";
+
+}
+
+bool is_winner() {
+  bool winner = false;
+  if ((board[0] == board[1]) && (board[1] == board[2]) && board[0] != " ") {
+    winner = true;
+  } else if ((board[3] == board[4]) && (board[3] == board[5]) && board[3] != " ") {
+    winner = true;
+  } else if ((board[6] == board[7]) && (board[6] == board[8]) && board[6] != " ") {
+    winner = true;
+  } 
+  else if ((board[0] == board[3]) && (board[0] == board[6]) && board[0] != " ") {
+    winner = true;
+  } else if ((board[1] == board[4]) && (board[1] == board[7]) && board[1] != " ") {
+    winner = true;
+  } else if ((board[2] == board[5]) && (board[2] == board[8]) && board[2] != " ") {
+    winner = true;
+  } 
+  else if ((board[0] == board[4]) && (board[0] == board[8]) && board[0] != " ") {
+    winner = true;
+  }
+  else if ((board[2] == board[4]) && (board[2] == board[6]) && board[2] != " ") {
+    winner = true;
+  }
+  return winner;
+}
+
+bool filled_up() {
+  bool filled = true;
+  for (int i = 0; i < 9; i++) {
+    if (board[i] == " ") {
+      filled = false;
+    }
+  }
+  return filled;
+}
+
+void draw() {
+  std::cout << "     |     |      \n";
+  std::cout << "  " << board[0] << "  |  " << board[1] << "  |  " << board[2] << "\n";
+  std::cout << "_____|_____|_____ \n";
+  std::cout << "     |     |      \n";
+  std::cout << "  " << board[3] << "  |  " << board[4] << "  |  " << board[5] << "\n";
+  std::cout << "_____|_____|_____ \n";
+  std::cout << "     |     |      \n";
+  std::cout << "  " << board[6] << "  |  " << board[7] << "  |  " << board[8] << "\n";
+  std::cout << "     |     |      \n";
+  std::cout << "\n";    
+}
+
+void choose_number() {
+  std::cout << "Player " << playernumber << "'s Turn (Enter 1-9): ";
+  while (!(std::cin >> position)) {
+    std::cout << "Player " << playernumber << ", please enter a valid number between 1 and 9: ";
+    std::cin.clear(); // used to clear the error flags on the cin stream
+    std::cin.ignore(); // ignores anything in input buffer
+  }
+  
+  std::cout << "\n";
+  while (board[position-1] != " ") {
+    std::cout << "Oops, there's already something in that position!\n\n";
+    std::cout << "Player " << playernumber << "'s Turn (Enter 1-9): ";
+    std::cin >> position;
+    std::cout << "\n";
+  }
+}
+
+void update_board() {
+  if (playernumber == 1) {
+    board[position-1] = "X";
+  } else {
+    board[position-1] = "O";
+  }
+}
+
+void change_player() {
+  if (playernumber == 1) {
+    playernumber++;
+  } else {
+    playernumber--;
+  }
+}
+
+void turn() {
+  while ( !is_winner() && !filled_up() ) {  
+    choose_number();
+    update_board();
+    change_player();
+    draw();
+  }
+}
+
+void end() {
+  if (is_winner()) {
+    std::cout << "Winner!\n";
+  }
+  else if (filled_up()) {
+    std::cout << "Tie!\n";
+  }
+}
+
