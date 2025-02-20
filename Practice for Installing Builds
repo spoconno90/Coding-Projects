@@ -88,5 +88,5 @@ int main() {
 
 [Insert code to begin installing desired build]
 
-system("wdapp launch")
+system("wdapp install <path of msixvc file>")
 
