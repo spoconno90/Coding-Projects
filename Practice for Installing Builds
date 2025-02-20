@@ -45,3 +45,48 @@ if (desiredbuild!=currentbuild) {
 end() {
     std::cout << "This program is now complete.\n"
 };
+
+
+
+
+
+
+
+//[Insert code that finds the current build number and sets variable currentbuild=that build #]
+//Here's code that finds and prints a specifc line in a specific file 
+#include <iostream>
+#include <fstream>
+#include <string> 
+
+using namespace std;
+
+int main() {
+    string filename = ".txt";
+    int line_number = 1;
+
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file: " << filename << endl;
+        return 1;
+    }
+
+    string line;
+    int current_line = 1;
+    while (getline(file, line)) {
+        if (current_line == line_number) {
+            cout << line << endl;
+            file.close();
+            return 0;
+        }
+        current_line++;
+    }
+
+    cerr << "Line " << line_number << " not found in file." << endl;
+    file.close();
+    return 1;
+}
+
+[Insert code to begin installing desired build]
+
+system("wdapp launch")
+
